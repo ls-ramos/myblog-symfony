@@ -25,6 +25,7 @@ services:
       - mysql-symfony
 
   mysql-symfony:
+    platform: linux/x86_64
     container_name: mysql-symfony
     image: mysql:${MYSQL_VERSION:-8.0}
     command: --default-authentication-plugin=mysql_native_password
