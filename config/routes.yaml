@@ -5,3 +5,9 @@ controllers:
 kernel:
     resource: ../src/Kernel.php
     type: annotation
+
+reactapp:
+    path: /{reactRouting?}
+    controller: App\Controller\DefaultController::getReactApp
+    requirements:
+        reactRouting: '.+'

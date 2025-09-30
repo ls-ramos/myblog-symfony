@@ -8,6 +8,8 @@ RUN apt-get update \
     && docker-php-ext-configure zip \
     && docker-php-ext-install zip
 
+RUN pecl install xdebug && docker-php-ext-enable xdebug
+
 WORKDIR /var/www/myblog
 
 # Install composer
